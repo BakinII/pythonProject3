@@ -1,16 +1,20 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from tkinter import *
+from tkinter import ttk
+root = Tk()
+root.geometry("700x350")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def clear_combobox():
+  combobox.set('')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+ingridient=('1','2','3')
+
+
+var = StringVar()
+combobox = ttk.Combobox(root, textvariable = var)
+combobox['values'] = ingridient
+combobox['state'] = 'readonly'
+combobox.pack(fill='x',padx= 5, pady=5)
+
+
+root.mainloop()
